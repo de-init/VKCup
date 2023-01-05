@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		9148B56429671467000DCA7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B56329671467000DCA7E /* SceneDelegate.swift */; };
-		9148B56629671467000DCA7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B56529671467000DCA7E /* ViewController.swift */; };
+		9148B56629671467000DCA7E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B56529671467000DCA7E /* MenuViewController.swift */; };
 		9148B56B29671468000DCA7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9148B56A29671468000DCA7E /* Assets.xcassets */; };
 		9148B56E29671468000DCA7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9148B56C29671468000DCA7E /* LaunchScreen.storyboard */; };
 		9148B5762967163F000DCA7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B5752967163F000DCA7E /* AppDelegate.swift */; };
+		9148B57A29671930000DCA7E /* InteractiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B57929671930000DCA7E /* InteractiveViewController.swift */; };
+		9148B57D29672B50000DCA7E /* Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B57C29672B50000DCA7E /* Interactive.swift */; };
+		9148B58029672D50000DCA7E /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B57F29672D50000DCA7E /* QuizViewController.swift */; };
+		9148B58229672D95000DCA7E /* MatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B58129672D95000DCA7E /* MatchingViewController.swift */; };
+		9148B58429672DBD000DCA7E /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B58329672DBD000DCA7E /* DragAndDropViewController.swift */; };
+		9148B58629672E5F000DCA7E /* FillFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B58529672E5F000DCA7E /* FillFormViewController.swift */; };
+		9148B58829672EAC000DCA7E /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B58729672EAC000DCA7E /* RatingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9148B55E29671467000DCA7E /* Interactive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interactive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9148B56329671467000DCA7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9148B56529671467000DCA7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9148B56529671467000DCA7E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9148B56A29671468000DCA7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9148B56D29671468000DCA7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9148B56F29671468000DCA7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9148B5752967163F000DCA7E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9148B57929671930000DCA7E /* InteractiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveViewController.swift; sourceTree = "<group>"; };
+		9148B57C29672B50000DCA7E /* Interactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactive.swift; sourceTree = "<group>"; };
+		9148B57F29672D50000DCA7E /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		9148B58129672D95000DCA7E /* MatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
+		9148B58329672DBD000DCA7E /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
+		9148B58529672E5F000DCA7E /* FillFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillFormViewController.swift; sourceTree = "<group>"; };
+		9148B58729672EAC000DCA7E /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +70,8 @@
 			children = (
 				9148B57729671662000DCA7E /* Application */,
 				9148B57829671690000DCA7E /* Resources */,
-				9148B56529671467000DCA7E /* ViewController.swift */,
+				9148B57B29672B2C000DCA7E /* Interactive Model */,
+				9148B57E29672CB5000DCA7E /* ViewControllers */,
 			);
 			path = Interactive;
 			sourceTree = "<group>";
@@ -78,6 +93,28 @@
 				9148B56A29671468000DCA7E /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9148B57B29672B2C000DCA7E /* Interactive Model */ = {
+			isa = PBXGroup;
+			children = (
+				9148B57929671930000DCA7E /* InteractiveViewController.swift */,
+				9148B57C29672B50000DCA7E /* Interactive.swift */,
+			);
+			path = "Interactive Model";
+			sourceTree = "<group>";
+		};
+		9148B57E29672CB5000DCA7E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9148B56529671467000DCA7E /* MenuViewController.swift */,
+				9148B57F29672D50000DCA7E /* QuizViewController.swift */,
+				9148B58129672D95000DCA7E /* MatchingViewController.swift */,
+				9148B58329672DBD000DCA7E /* DragAndDropViewController.swift */,
+				9148B58529672E5F000DCA7E /* FillFormViewController.swift */,
+				9148B58729672EAC000DCA7E /* RatingViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +188,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9148B5762967163F000DCA7E /* AppDelegate.swift in Sources */,
-				9148B56629671467000DCA7E /* ViewController.swift in Sources */,
+				9148B58829672EAC000DCA7E /* RatingViewController.swift in Sources */,
+				9148B56629671467000DCA7E /* MenuViewController.swift in Sources */,
+				9148B58229672D95000DCA7E /* MatchingViewController.swift in Sources */,
 				9148B56429671467000DCA7E /* SceneDelegate.swift in Sources */,
+				9148B58029672D50000DCA7E /* QuizViewController.swift in Sources */,
+				9148B57A29671930000DCA7E /* InteractiveViewController.swift in Sources */,
+				9148B57D29672B50000DCA7E /* Interactive.swift in Sources */,
+				9148B58629672E5F000DCA7E /* FillFormViewController.swift in Sources */,
+				9148B58429672DBD000DCA7E /* DragAndDropViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,11 +337,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMKNRW4V63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Interactive/Info.plist;
+				INFOPLIST_FILE = Interactive/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,11 +365,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMKNRW4V63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Interactive/Info.plist;
+				INFOPLIST_FILE = Interactive/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
