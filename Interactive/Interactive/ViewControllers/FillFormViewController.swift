@@ -1,8 +1,9 @@
 import UIKit
 
-class FillFormViewController: UIViewController {
+class FillFormViewController: InteractiveViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
     }
 }

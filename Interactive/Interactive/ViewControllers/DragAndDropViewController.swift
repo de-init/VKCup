@@ -1,8 +1,9 @@
 import UIKit
 
-class DragAndDropViewController: UIViewController {
+class DragAndDropViewController: InteractiveViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
     }
 }

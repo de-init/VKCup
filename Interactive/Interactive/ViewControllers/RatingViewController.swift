@@ -1,8 +1,9 @@
 import UIKit
 
-class RatingViewController: UIViewController {
+class RatingViewController: InteractiveViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
     }
 }
