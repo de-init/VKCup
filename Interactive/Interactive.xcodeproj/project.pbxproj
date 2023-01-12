@@ -21,6 +21,9 @@
 		9148B58629672E5F000DCA7E /* FillFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B58529672E5F000DCA7E /* FillFormViewController.swift */; };
 		9148B58829672EAC000DCA7E /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B58729672EAC000DCA7E /* RatingViewController.swift */; };
 		9148B58A296730D1000DCA7E /* InteractiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148B589296730D1000DCA7E /* InteractiveCollectionViewCell.swift */; };
+		9192C76B296D87E50050014C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192C76A296D87E50050014C /* QuestionModel.swift */; };
+		9192C770296DB88F0050014C /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192C76E296DB88F0050014C /* QuestionCollectionViewCell.swift */; };
+		9192C771296DB88F0050014C /* QuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9192C76F296DB88F0050014C /* QuestionCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		9148B58529672E5F000DCA7E /* FillFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillFormViewController.swift; sourceTree = "<group>"; };
 		9148B58729672EAC000DCA7E /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		9148B589296730D1000DCA7E /* InteractiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		9192C76A296D87E50050014C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		9192C76E296DB88F0050014C /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
+		9192C76F296DB88F0050014C /* QuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 				9148B57829671690000DCA7E /* Resources */,
 				9148B57B29672B2C000DCA7E /* Interactive Model */,
 				9148B57E29672CB5000DCA7E /* ViewControllers */,
+				9192C764296D80E00050014C /* Modules */,
 				91187150296C195800F0E3D5 /* Extensions */,
 			);
 			path = Interactive;
@@ -129,6 +136,24 @@
 				9148B58729672EAC000DCA7E /* RatingViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9192C764296D80E00050014C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9192C769296D877D0050014C /* Quiz */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9192C769296D877D0050014C /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				9192C76A296D87E50050014C /* QuestionModel.swift */,
+				9192C76E296DB88F0050014C /* QuestionCollectionViewCell.swift */,
+				9192C76F296DB88F0050014C /* QuestionCollectionViewCell.xib */,
+			);
+			path = Quiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9192C771296DB88F0050014C /* QuestionCollectionViewCell.xib in Resources */,
 				9148B56E29671468000DCA7E /* LaunchScreen.storyboard in Resources */,
 				9148B56B29671468000DCA7E /* Assets.xcassets in Resources */,
 			);
@@ -201,7 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9192C76B296D87E50050014C /* QuestionModel.swift in Sources */,
 				9148B58A296730D1000DCA7E /* InteractiveCollectionViewCell.swift in Sources */,
+				9192C770296DB88F0050014C /* QuestionCollectionViewCell.swift in Sources */,
 				9148B5762967163F000DCA7E /* AppDelegate.swift in Sources */,
 				9148B58829672EAC000DCA7E /* RatingViewController.swift in Sources */,
 				91187152296C19CE00F0E3D5 /* UIColor.swift in Sources */,

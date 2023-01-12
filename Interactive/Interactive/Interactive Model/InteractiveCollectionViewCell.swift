@@ -6,7 +6,8 @@ class InteractiveCollectionViewCell: UICollectionViewCell {
     
     private let arrowImageView: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
+        image.image = UIImage(named: "Arrow")
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -58,7 +59,12 @@ class InteractiveCollectionViewCell: UICollectionViewCell {
             interactiveImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             
             interactiveName.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            interactiveName.leadingAnchor.constraint(equalTo: self.interactiveImage.trailingAnchor, constant: 20)
+            interactiveName.leadingAnchor.constraint(equalTo: self.interactiveImage.trailingAnchor, constant: 20),
+            
+            arrowImageView.heightAnchor.constraint(equalToConstant: 20),
+            arrowImageView.widthAnchor.constraint(equalToConstant: 20),
+            arrowImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            arrowImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])
     }
 }
