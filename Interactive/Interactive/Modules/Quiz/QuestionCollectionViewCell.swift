@@ -50,7 +50,7 @@ class QuestionCollectionViewCell: UICollectionViewCell {
     private func configureUI() {
         [percentLabel_1, percentLabel_2, percentLabel_3, percentLabel_4].forEach({
             $0?.alpha = 0
-            $0?.text = "100%"
+            $0?.text = "0%"
         })
         
         [answerView_1, answerView_2, answerView_3, answerView_4].forEach({
@@ -65,24 +65,28 @@ class QuestionCollectionViewCell: UICollectionViewCell {
         if sender.view == answerView_1 {
             if answerLabel_1.text == correctAnswer {
                 correctAnimate(view: answerView_1)
+                percentLabel_1.text = "100%"
             } else {
                 incorrectAnimate(view: answerView_1)
             }
         } else if sender.view == answerView_2 {
             if answerLabel_2.text == correctAnswer {
                 correctAnimate(view: answerView_2)
+                percentLabel_2.text = "100%"
             } else {
                 incorrectAnimate(view: answerView_2)
             }
         } else if sender.view == answerView_3 {
             if answerLabel_3.text == correctAnswer {
                 correctAnimate(view: answerView_3)
+                percentLabel_3.text = "100%"
             } else {
                 incorrectAnimate(view: answerView_3)
             }
         } else if sender.view == answerView_4 {
             if answerLabel_4.text == correctAnswer {
                 correctAnimate(view: answerView_4)
+                percentLabel_4.text = "100%"
             } else {
                 incorrectAnimate(view: answerView_4)
             }

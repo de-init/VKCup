@@ -24,7 +24,7 @@
 		9192C76B296D87E50050014C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192C76A296D87E50050014C /* QuestionModel.swift */; };
 		9192C770296DB88F0050014C /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192C76E296DB88F0050014C /* QuestionCollectionViewCell.swift */; };
 		9192C771296DB88F0050014C /* QuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9192C76F296DB88F0050014C /* QuestionCollectionViewCell.xib */; };
-		91F599E829717C2800D7B292 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 91F599E729717C2800D7B292 /* Splash.json */; };
+		91CE834A297312ED00CA0AC4 /* Splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 91CE8349297312ED00CA0AC4 /* Splash.json */; };
 		CF036375A7C3239A62C1820A /* Pods_Interactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC639EC60343C700B929932 /* Pods_Interactive.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		9192C76A296D87E50050014C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		9192C76E296DB88F0050014C /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		9192C76F296DB88F0050014C /* QuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCollectionViewCell.xib; sourceTree = "<group>"; };
-		91F599E729717C2800D7B292 /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
+		91CE8349297312ED00CA0AC4 /* Splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.json; sourceTree = "<group>"; };
 		EA41C8B0E406E644EC0C480B /* Pods-Interactive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interactive.debug.xcconfig"; path = "Target Support Files/Pods-Interactive/Pods-Interactive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9148B56A29671468000DCA7E /* Assets.xcassets */,
-				91F599E729717C2800D7B292 /* Splash.json */,
+				91CE8349297312ED00CA0AC4 /* Splash.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91F599E829717C2800D7B292 /* Splash.json in Resources */,
+				91CE834A297312ED00CA0AC4 /* Splash.json in Resources */,
 				9192C771296DB88F0050014C /* QuestionCollectionViewCell.xib in Resources */,
 				9148B56E29671468000DCA7E /* LaunchScreen.storyboard in Resources */,
 				9148B56B29671468000DCA7E /* Assets.xcassets in Resources */,

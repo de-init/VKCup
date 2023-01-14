@@ -10,7 +10,9 @@ class RatingViewController: InteractiveViewController {
         stack.axis = .horizontal
         stack.distribution = .fillEqually
         stack.translatesAutoresizingMaskIntoConstraints = false
-        let tap = UIPanGestureRecognizer(target: self, action: #selector(selectRate(_:)))
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+        stack.addGestureRecognizer(pan)
         stack.addGestureRecognizer(tap)
         return stack
     }()
@@ -29,7 +31,7 @@ class RatingViewController: InteractiveViewController {
         let view = LottieAnimationView(name: "Splash")
         view.contentMode = .scaleAspectFit
         view.loopMode = .playOnce
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.frame.size = CGSize(width: 500, height: 500)
         return view
     }()
     
@@ -52,29 +54,68 @@ class RatingViewController: InteractiveViewController {
         configureUI()
     }
     
-    @objc private func selectRate(_ sender: UITapGestureRecognizer) {
+    //MARK: - Helpers methods
+    @objc private func handlePanGesture(_ sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: self.stackView)
+        switch sender.state {
+        case .began, .changed:
+            let starWidth = stackView.bounds.width / CGFloat(starsCount)
+            let rate = Int(location.x / starWidth) + 1
+            
+            if rate != self.selectedRate && rate < 6 {
+                self.selectedRate = rate
+            }
+            stackView.arrangedSubviews.forEach({ subview in
+                guard let star = subview as? UIImageView else { return }
+                star.isHighlighted = star.tag <= rate
+            })
+        case .ended:
+            let center = stackView.arrangedSubviews[selectedRate - 1].center.x
+            splashAnimation.center = CGPoint(x: center + horizontalInset, y: view.bounds.midY)
+            animatePlay()
+            splashAnimation.play(fromFrame: 20, toFrame: 45)
+        default:
+            break
+        }
+    }
+    
+    @objc private func handleTapGesture(_ sender: UITapGestureRecognizer) {
         let location = sender.location(in: stackView)
         let starWidth = stackView.bounds.width / CGFloat(starsCount)
         let rate = Int(location.x / starWidth) + 1
-        splashAnimation.play(toFrame: 30)
         
         if rate != self.selectedRate {
             self.selectedRate = rate
         }
-        stackView.arrangedSubviews.forEach({ subview in
-            guard let star = subview as? UIImageView else { return }
-            star.isHighlighted = star.tag <= rate
-        })
+        
+        stackView.arrangedSubviews.forEach { subview in
+            guard let starImageView = subview as? UIImageView else {
+                return
+            }
+            starImageView.isHighlighted = starImageView.tag <= rate
+        }
+        let center = stackView.arrangedSubviews[selectedRate - 1].center.x
+        splashAnimation.center = CGPoint(x: center + horizontalInset, y: view.bounds.midY)
+        animatePlay()
+        splashAnimation.play(fromFrame: 20, toFrame: 45)
     }
+    
+    private func animatePlay() {
+        UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut) {
+            self.stackView.arrangedSubviews[self.selectedRate - 1].transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        } completion: { _ in
+            self.stackView.arrangedSubviews[self.selectedRate - 1].transform = .identity
+        }
+    }
+    
     //MARK: - Configure UI
     private func configureUI() {
         createStars()
         view.backgroundColor = .black
-        view.addSubview(splashAnimation)
         view.addSubview(backgroundView)
+        view.addSubview(splashAnimation)
         view.addSubview(stackView)
         view.addSubview(labelText)
-        splashAnimation.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
     }
     
     private func createStars() {
@@ -89,6 +130,7 @@ class RatingViewController: InteractiveViewController {
         let imageView = UIImageView(image: UIImage(named: "Unfilled_Star"), highlightedImage: UIImage(named: "Filled_Star"))
         imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }
     
