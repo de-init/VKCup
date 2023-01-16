@@ -3,16 +3,6 @@ import UIKit
 class MatchingViewController: InteractiveViewController {
     
     //MARK: - Properties
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Matching items"
-        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
-        label.textAlignment = .left
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     private lazy var leftStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -64,7 +54,6 @@ class MatchingViewController: InteractiveViewController {
     //MARK: - Configure UI
     private func configureUI() {
         view.backgroundColor = .black
-        view.addSubview(titleLabel)
         view.addSubview(rightStackView)
         view.addSubview(leftStackView)
     }
@@ -174,9 +163,6 @@ class MatchingViewController: InteractiveViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-            titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            
             leftStackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
             leftStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             leftStackView.heightAnchor.constraint(equalToConstant: heightStackView),
